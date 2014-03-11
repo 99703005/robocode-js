@@ -60,19 +60,22 @@
           }
           return;
         }
-        this.turn_turret_left(30);
-        this.turn_left(30);
+        this.turn_turret_left(360);
+        this.turn_left(360);
         this.move_forwards(Math.random() * 50 + 10);
+        this.shoot();
       }
     };
     prototype.onWallCollide = function(){
       this.move_opposide(10);
       this.turn_left(90);
       this.idleCount = 0;
+      this.shoot();
     };
     prototype.onHit = function(){
       this.idleCount = 0;
       this.yell("No! I'm hit!");
+      this.shoot();
     };
     prototype.onEnemySpot = function(){
       this.myVarEnemy = this.enemySpot;
