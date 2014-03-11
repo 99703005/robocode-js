@@ -72,7 +72,7 @@
     };
     prototype.onEnemySpot = function(){
       this.myVarEnemy = this.enemySpot;
-      this.shoot();
+      this.shoot(tinyShoot);
       this.yell("Enemy spotted!");
       this.idleCount = 0;
     };
