@@ -6,9 +6,9 @@
     var idleCount, prototype = extend$((import$(Boss3, superclass).displayName = 'Boss3', Boss3), superclass).prototype, constructor = Boss3;
     idleCount = 0;
     prototype.doSearch = function(){
-      this.turn_turret_right(45);
-      this.turn_right(15);
-      this.move_forwards(25);
+      this.turn_turret_right(0);
+      this.turn_right(1000);
+      this.move_forwards(0);
     };
     prototype.onIdle = function(){
       var myAngle, forward, tinyMove, tinyShoot, leftDist, rightDist;
@@ -17,7 +17,7 @@
       if (this.myVarEnemy) {
         forward = false;
         tinyMove = Math.random() * 45;
-        tinyShoot = 1;
+        tinyShoot = Math.random() * 10;
         leftDist = myAngle + 360 - this.myVarEnemy[0].angle;
         if (leftDist > 360) {
           leftDist = leftDist - 360;
