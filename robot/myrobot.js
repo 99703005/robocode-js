@@ -8,7 +8,7 @@
     prototype.doSearch = function(){
       this.turn_turret_right(45);
       this.turn_right(15);
-      this.move_forwards(360);
+      this.move_forwards(25);
       this.shoot();
     };
     prototype.onIdle = function(){
@@ -68,8 +68,8 @@
           }
           return;
         }
-        this.turn_turret_left(45);
-        this.turn_left(45);
+        this.turn_turret_left(30);
+        this.turn_left(30);
         this.move_forwards(Math.random() * 50 + 10);
         this.shoot();
       }
