@@ -9,6 +9,7 @@
       this.turn_turret_right(45);
       this.turn_right(15);
       this.move_forwards(360);
+      this.shoot();
     };
     prototype.onIdle = function(){
       var myAngle, forward, tinyMove, tinyShoot, leftDist, rightDist;
@@ -36,13 +37,17 @@
           }
           if (leftDist > rightDist) {
             this.turn_turret_right(rightDist + 5 + tinyShoot);
+            this.shoot();
           } else {
             this.turn_turret_left(leftDist + 5 + tinyShoot);
+            this.shoot();
           }
           if (forward) {
             this.move_forwards(tinyMove);
+            this.shoot();
           } else {
             this.move_backwards(tinyMove);
+            this.shoot();
           }
           this.shoot();
         } else {
