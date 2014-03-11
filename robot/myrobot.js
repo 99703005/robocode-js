@@ -40,9 +40,9 @@
           } else {
             this.move_backwards(tinyMove);
           }
-          this.shoot();
+          this.shoot(tinyShoot);
         } else {
-          this.shoot();
+          this.shoot(tinyShoot);
         }
         this.myVarEnemy = undefined;
       } else {
