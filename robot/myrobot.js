@@ -21,14 +21,17 @@
         leftDist = myAngle + 360 - this.myVarEnemy[0].angle;
         if (leftDist > 360) {
           leftDist = leftDist - 360;
+          this.shoot();
         }
         rightDist = this.myVarEnemy[0].angle - myAngle;
         if (rightDist < 0) {
           rightDist = 360 + rightDist;
+          this.shoot();
         }
         if (leftDist !== rightDist) {
           if (Math.random() > 0.5) {
             forward = true;
+            this.shoot();
           }
           if (leftDist > rightDist) {
             this.turn_turret_right(rightDist + 5 + tinyShoot);
