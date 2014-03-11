@@ -40,9 +40,9 @@
           } else {
             this.move_backwards(tinyMove);
           }
-          this.shoot(tinyShoot);
+          this.shoot();
         } else {
-          this.shoot(tinyShoot);
+          this.shoot();
         }
         this.myVarEnemy = undefined;
       } else {
@@ -72,7 +72,7 @@
     };
     prototype.onEnemySpot = function(){
       this.myVarEnemy = this.enemySpot;
-      this.shoot(tinyShoot);
+      this.shoot();
       this.yell("Enemy spotted!");
       this.idleCount = 0;
     };
