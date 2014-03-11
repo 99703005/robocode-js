@@ -9,7 +9,12 @@
       this.turn_turret_right(45);
       this.turn_right(15);
       this.move_forwards(25);
-      this.shoot(100);
+      this.shoot();
+      this.shoot();
+      this.shoot();
+      this.shoot();
+      this.shoot();
+      this.shoot();
     };
     prototype.onIdle = function(){
       var myAngle, forward, tinyMove, tinyShoot, leftDist, rightDist;
@@ -20,50 +25,50 @@
         tinyMove = Math.random() * 45;
         tinyShoot = Math.random() * 10;
         leftDist = myAngle + 360 - this.myVarEnemy[0].angle;
-        this.shoot(100);
+        this.shoot();
         if (leftDist > 360) {
           leftDist = leftDist - 360;
-          this.shoot(100);
+          this.shoot();
         }
         rightDist = this.myVarEnemy[0].angle - myAngle;
         if (rightDist < 0) {
           rightDist = 360 + rightDist;
-          this.shoot(100);
+          this.shoot();
         }
         if (leftDist !== rightDist) {
           if (Math.random() > 0.5) {
             forward = true;
-            this.shoot(100);
+            this.shoot();
           }
           if (leftDist > rightDist) {
             this.turn_turret_right(rightDist + 5 + tinyShoot);
-            this.shoot(100);
+            this.shoot();
           } else {
             this.turn_turret_left(leftDist + 5 + tinyShoot);
-            this.shoot(100);
+            this.shoot();
           }
           if (forward) {
             this.move_forwards(tinyMove);
-            this.shoot(100);
+            this.shoot();
           } else {
             this.move_backwards(tinyMove);
-            this.shoot(100);
+            this.shoot();
           }
-          this.shoot(100);
+          this.shoot();
         } else {
-          this.shoot(100);
+          this.shoot();
         }
         this.myVarEnemy = undefined;
       } else {
         if (this.idleCount > 3) {
           this.doSearch();
-          this.shoot(100);
+          this.shoot();
           if (this.idleCount > 4) {
             this.doSearch();
-            this.shoot(100);
+            this.shoot();
             if (this.idleCount > 5) {
               this.doSearch();
-              this.shoot(100);
+              this.shoot();
             }
           }
           return;
