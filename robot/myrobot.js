@@ -19,6 +19,7 @@
         tinyMove = Math.random() * 45;
         tinyShoot = Math.random() * 10;
         leftDist = myAngle + 360 - this.myVarEnemy[0].angle;
+        this.shoot();
         if (leftDist > 360) {
           leftDist = leftDist - 360;
           this.shoot();
