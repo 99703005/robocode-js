@@ -10,15 +10,11 @@
       this.turn_right(15);
       this.move_forwards(25);
       this.shoot();
-      this.shoot();
-      this.shoot();
-      this.shoot();
-      this.shoot();
-      this.shoot();
     };
     prototype.onIdle = function(){
       var myAngle, forward, tinyMove, tinyShoot, leftDist, rightDist;
       this.idleCount++;
+      this.shoot();
       myAngle = this.me.angle % 360;
       if (this.myVarEnemy) {
         forward = false;
