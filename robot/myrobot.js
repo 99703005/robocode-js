@@ -6,9 +6,9 @@
     var idleCount, prototype = extend$((import$(Boss3, superclass).displayName = 'Boss3', Boss3), superclass).prototype, constructor = Boss3;
     idleCount = 0;
     prototype.doSearch = function(){
-      this.turn_turret_right(0);
-      this.turn_right(1000000);
-      this.move_forwards(0);
+      this.turn_turret_right(360);
+      this.turn_right(360);
+      this.move_forwards(360);
     };
     prototype.onIdle = function(){
       var myAngle, forward, tinyMove, tinyShoot, leftDist, rightDist;
