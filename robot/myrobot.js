@@ -16,7 +16,7 @@
       myAngle = this.me.angle % 360;
       if (this.myVarEnemy) {
         forward = false;
-        tinyMove = Math.random() * 45;
+        tinyMove = Math.random() * 15;
         tinyShoot = Math.random() * 10;
         leftDist = myAngle + 360 - this.myVarEnemy[0].angle;
         if (leftDist > 360) {
@@ -36,9 +36,9 @@
             this.turn_turret_left(leftDist + 0 + tinyShoot);
           }
           if (forward) {
-            this.move_forwards(tinyMove);
+            this.move_forwards(tinyMove % 10);
           } else {
-            this.move_backwards(tinyMove);
+            this.move_backwards(tinyMove % 10);
           }
           this.shoot();
         } else {
