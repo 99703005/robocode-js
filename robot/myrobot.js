@@ -31,9 +31,9 @@
             forward = true;
           }
           if (leftDist > rightDist) {
-            this.turn_turret_right(rightDist + 5 + tinyShoot);
+            this.turn_turret_right(rightDist + 1 + tinyShoot);
           } else {
-            this.turn_turret_left(leftDist + 5 + tinyShoot);
+            this.turn_turret_left(leftDist + 1 + tinyShoot);
           }
           if (forward) {
             this.move_forwards(tinyMove);
