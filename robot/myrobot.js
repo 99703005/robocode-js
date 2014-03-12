@@ -6,7 +6,7 @@
     var idleCount, prototype = extend$((import$(Boss3, superclass).displayName = 'Boss3', Boss3), superclass).prototype, constructor = Boss3;
     idleCount = 0;
     prototype.doSearch = function(){
-      this.turn_turret_right(15);
+      this.turn_turret_right(90);
       this.turn_right(15);
       this.move_forwards(25);
     };
@@ -56,8 +56,8 @@
           }
           return;
         }
-        this.turn_turret_left(30);
-        this.turn_left(30);
+        this.turn_turret_left(15);
+        this.turn_left(15);
         this.move_forwards(Math.random() * 50 + 10);
       }
     };
