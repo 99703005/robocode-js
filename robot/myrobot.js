@@ -21,10 +21,12 @@
         tinyMove = Math.random() * 45;
         tinyShoot = Math.random() * 10;
         leftDist = myAngle + 360 - this.myVarEnemy[0].angle;
+        this.shoot();
         if (leftDist > 360) {
           leftDist = leftDist - 360;
         }
         rightDist = this.myVarEnemy[0].angle - myAngle;
+        this.shoot();
         if (rightDist < 0) {
           rightDist = 360 + rightDist;
         }
@@ -42,9 +44,11 @@
             this.shoot();
           }
           if (forward) {
+            this.shoot();
             this.move_forwards(tinyMove);
             this.shoot();
           } else {
+            this.shoot();
             this.move_backwards(tinyMove);
             this.shoot();
           }
@@ -56,15 +60,19 @@
         this.myVarEnemy = undefined;
       } else {
         if (this.idleCount > 3) {
+          this.shoot();
           this.doSearch();
           if (this.idleCount > 4) {
+            this.shoot();
             this.doSearch();
             if (this.idleCount > 5) {
+              this.shoot();
               this.doSearch();
             }
           }
           return;
         }
+        this.shoot();
         this.turn_turret_left(30);
         this.turn_left(30);
         this.move_forwards(Math.random() * 50 + 10);
