@@ -6,7 +6,7 @@
     var idleCount, prototype = extend$((import$(Boss3, superclass).displayName = 'Boss3', Boss3), superclass).prototype, constructor = Boss3;
     idleCount = 0;
     prototype.doSearch = function(){
-      this.turn_turret_right(180);
+      this.turn_turret_right(45);
       this.turn_right(15);
       this.move_forwards(25);
     };
@@ -31,9 +31,9 @@
             forward = true;
           }
           if (leftDist > rightDist) {
-            this.turn_turret_right(rightDist + 1 + tinyShoot);
+            this.turn_turret_right(rightDist + 0 + tinyShoot);
           } else {
-            this.turn_turret_left(leftDist + 1 + tinyShoot);
+            this.turn_turret_left(leftDist + 0 + tinyShoot);
           }
           if (forward) {
             this.move_forwards(tinyMove);
@@ -56,8 +56,8 @@
           }
           return;
         }
-        this.turn_turret_left(180);
-        this.turn_left(15);
+        this.turn_turret_left(45);
+        this.turn_left(30);
         this.move_forwards(Math.random() * 50 + 10);
       }
     };
