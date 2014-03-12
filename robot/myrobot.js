@@ -9,11 +9,13 @@
       this.turn_turret_right(45);
       this.turn_right(15);
       this.move_forwards(25);
+      this.shoot();
     };
     prototype.onIdle = function(){
       var myAngle, forward, tinyMove, tinyShoot, leftDist, rightDist;
       this.idleCount++;
       myAngle = this.me.angle % 360;
+      this.shoot();
       if (this.myVarEnemy) {
         forward = false;
         tinyMove = Math.random() * 45;
@@ -31,19 +33,26 @@
             forward = true;
           }
           if (leftDist > rightDist) {
+            this.shoot;
             this.turn_turret_right(rightDist + 5 + tinyShoot);
+            this.shoot();
           } else {
+            this.shoot();
             this.turn_turret_left(leftDist + 5 + tinyShoot);
+            this.shoot();
           }
           if (forward) {
             this.move_forwards(tinyMove);
+            this.shoot();
           } else {
             this.move_backwards(tinyMove);
+            this.shoot();
           }
           this.shoot();
         } else {
           this.shoot();
         }
+        this.shoot();
         this.myVarEnemy = undefined;
       } else {
         if (this.idleCount > 3) {
