@@ -6,7 +6,7 @@
     var idleCount, prototype = extend$((import$(Boss3, superclass).displayName = 'Boss3', Boss3), superclass).prototype, constructor = Boss3;
     idleCount = 0;
     prototype.doSearch = function(){
-      this.turn_turret_right(15);
+      this.turn_turret_right(45);
       this.turn_right(15);
       this.move_forwards(25);
     };
@@ -16,8 +16,8 @@
       myAngle = this.me.angle % 360;
       if (this.myVarEnemy) {
         forward = false;
-        tinyMove = Math.random() * 15;
-        tinyShoot = Math.random() % 10;
+        tinyMove = Math.random() * 45;
+        tinyShoot = Math.random() * 10;
         leftDist = myAngle + 360 - this.myVarEnemy[0].angle;
         if (leftDist > 360) {
           leftDist = leftDist - 360;
@@ -31,14 +31,14 @@
             forward = true;
           }
           if (leftDist > rightDist) {
-            this.turn_turret_right(rightDist + 0 + tinyShoot);
+            this.turn_turret_right(rightDist + 5 + tinyShoot);
           } else {
-            this.turn_turret_left(leftDist + 0 + tinyShoot);
+            this.turn_turret_left(leftDist + 5 + tinyShoot);
           }
           if (forward) {
-            this.move_forwards(tinyMove % 10);
+            this.move_forwards(tinyMove);
           } else {
-            this.move_backwards(tinyMove % 10);
+            this.move_backwards(tinyMove);
           }
           this.shoot();
         } else {
@@ -56,7 +56,7 @@
           }
           return;
         }
-        this.turn_turret_left(45);
+        this.turn_turret_left(30);
         this.turn_left(30);
         this.move_forwards(Math.random() * 50 + 10);
       }
