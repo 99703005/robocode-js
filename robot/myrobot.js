@@ -7,8 +7,8 @@
     idleCount = 0;
     prototype.doSearch = function(){
       this.turn_turret_right(1);
-      this.turn_right(10);
-      this.move_forwards(50);
+      this.turn_right(1);
+      this.move_forwards(1);
       this.shoot();
       this.OnIdle();
     };
