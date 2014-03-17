@@ -84,6 +84,7 @@
     prototype.onHit = function(){
       this.idleCount = 0;
       this.yell("No! I'm hit!");
+      this.doSearch();
     };
     prototype.onEnemySpot = function(){
       this.myVarEnemy = this.enemySpot;
