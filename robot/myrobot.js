@@ -71,14 +71,15 @@
       }
     };
     prototype.onWallCollide = function(){
+      this.shoot();
       this.move_opposide(10);
       this.turn_left(90);
       this.idleCount = 0;
     };
     prototype.onHit = function(){
+      this.shoot();
       this.idleCount = 0;
       this.yell("No! I'm hit!");
-      this.doSearch();
     };
     prototype.onEnemySpot = function(){
       this.myVarEnemy = this.enemySpot;
