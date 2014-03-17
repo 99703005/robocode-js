@@ -35,25 +35,20 @@
         if (leftDist !== rightDist) {
           if (Math.random() > 0.5) {
             forward = true;
-            this.shoot();
           }
           if (leftDist > rightDist) {
             this.shoot;
             this.turn_turret_right(rightDist + 5 + tinyShoot);
-            this.shoot();
           } else {
             this.shoot();
             this.turn_turret_left(leftDist + 5 + tinyShoot);
-            this.shoot();
           }
           if (forward) {
             this.shoot();
             this.move_forwards(tinyMove);
-            this.shoot();
           } else {
             this.shoot();
             this.move_backwards(tinyMove);
-            this.shoot();
           }
           this.shoot();
         } else {
@@ -82,13 +77,11 @@
       }
     };
     prototype.onWallCollide = function(){
-      this.shoot();
       this.move_opposide(10);
       this.turn_left(90);
       this.idleCount = 0;
     };
     prototype.onHit = function(){
-      this.shoot();
       this.idleCount = 0;
       this.yell("No! I'm hit!");
     };
