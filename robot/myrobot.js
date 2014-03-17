@@ -10,6 +10,7 @@
       this.turn_right(15);
       this.move_forwards(25);
       this.shoot();
+      this.OnIdle();
     };
     prototype.onIdle = function(){
       var myAngle, forward, tinyMove, tinyShoot, leftDist, rightDist;
