@@ -50,7 +50,6 @@
         }
         this.shoot();
         this.myVarEnemy = undefined;
-        this.OnIdle();
       } else {
         if (this.idleCount > 3) {
           this.doSearch();
