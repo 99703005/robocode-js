@@ -34,6 +34,7 @@
         }
         if (leftDist !== rightDist) {
           if (Math.random() > 0.5) {
+            this.shoot();
             forward = true;
           }
           if (leftDist > rightDist) {
