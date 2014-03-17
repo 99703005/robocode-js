@@ -34,21 +34,16 @@
         }
         if (leftDist !== rightDist) {
           if (Math.random() > 0.5) {
-            this.shoot();
             forward = true;
           }
           if (leftDist > rightDist) {
-            this.shoot;
             this.turn_turret_right(rightDist + 5 + tinyShoot);
           } else {
-            this.shoot();
             this.turn_turret_left(leftDist + 5 + tinyShoot);
           }
           if (forward) {
-            this.shoot();
             this.move_forwards(tinyMove);
           } else {
-            this.shoot();
             this.move_backwards(tinyMove);
           }
           this.shoot();
@@ -59,13 +54,10 @@
         this.myVarEnemy = undefined;
       } else {
         if (this.idleCount > 3) {
-          this.shoot();
           this.doSearch();
           if (this.idleCount > 4) {
-            this.shoot();
             this.doSearch();
             if (this.idleCount > 5) {
-              this.shoot();
               this.doSearch();
             }
           }
