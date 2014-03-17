@@ -24,15 +24,18 @@
         this.shoot();
         if (leftDist > 360) {
           leftDist = leftDist - 360;
+          this.shoot();
         }
         rightDist = this.myVarEnemy[0].angle - myAngle;
         this.shoot();
         if (rightDist < 0) {
           rightDist = 360 + rightDist;
+          this.shoot();
         }
         if (leftDist !== rightDist) {
           if (Math.random() > 0.5) {
             forward = true;
+            this.shoot();
           }
           if (leftDist > rightDist) {
             this.shoot;
@@ -79,11 +82,13 @@
       }
     };
     prototype.onWallCollide = function(){
+      this.shoot();
       this.move_opposide(10);
       this.turn_left(90);
       this.idleCount = 0;
     };
     prototype.onHit = function(){
+      this.shoot();
       this.idleCount = 0;
       this.yell("No! I'm hit!");
     };
