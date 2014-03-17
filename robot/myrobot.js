@@ -64,8 +64,8 @@
           return;
         }
         this.shoot();
-        this.turn_turret_left(1);
-        this.turn_left(1);
+        this.turn_turret_left(50);
+        this.turn_left(50);
         this.move_forwards(Math.random() * 50 + 10);
       }
     };
