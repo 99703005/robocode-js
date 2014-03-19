@@ -15,20 +15,17 @@
       var myAngle, forward, tinyMove, tinyShoot, leftDist, rightDist;
       this.idleCount++;
       myAngle = this.me.angle % 360;
-      this.shoot();
       if (this.myVarEnemy) {
         forward = false;
         tinyMove = Math.random() * 4.5;
-        tinyShoot = Math.random() * 1;
+        tinyShoot = Math.random() * 1.0;
         leftDist = myAngle + 360 - this.myVarEnemy[0].angle;
         if (leftDist > 360) {
           leftDist = leftDist - 360;
         }
         rightDist = this.myVarEnemy[0].angle - myAngle;
-        this.shoot();
         if (rightDist < 0) {
           rightDist = 360 + rightDist;
-          this.shoot();
         }
         if (leftDist !== rightDist) {
           if (Math.random() > 0.5) {
@@ -48,7 +45,6 @@
         } else {
           this.shoot();
         }
-        this.shoot();
         this.myVarEnemy = undefined;
       } else {
         if (this.idleCount > 3) {
